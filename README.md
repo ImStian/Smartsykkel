@@ -17,6 +17,7 @@ Prosjektet samler inn informasjon fra ulike sensorer (BME280, MPU6050, NEO-6M) o
 - BME280 - Temperatur, trykk og fuktighetsmåler
 - MPU6050 - 3-Akse akselerometer og gyroskop
 - NEO-6M - GPS
+- OLED Skjerm 128x64
 
 ## Konfigurering:
 For å få denne koden til å fungere til eget bruk er det nødvendig med litt konfigurering av koden.
