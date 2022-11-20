@@ -38,9 +38,9 @@ float accelerationErrorX; // Avvik i måling for X-retning
 float accelerationErrorY; // Avvik i måling for Y-retning 
 float accelerationErrorZ; // Avvik i måling for Z-retning
 
-float velocityX;
-float velocityY;
-float velocityZ;
+float velocityX = 0;
+float velocityY = 0;
+float velocityZ = 0;
 
 // GPS
     //Pinout for ESP32 GPS
