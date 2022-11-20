@@ -32,3 +32,4 @@ const char *DEVICE_LABEL = "";   // device label to subscribe to
 - <em>WIFI_SSID</em> skriver du inn navnet (SSID) på nettverket ESP32 skal koble til.
 - <em>WIFI_PASS</em> skriver du inn passordet til nettverket du definerte under <em>WIFI_SSID</em>.
 - <em>DEVICE_LABEL</em> er navnet på enheten du oppretter inne på Ubidots.
+Når du kjører koden for første gang vil variablene som tilhører enheten automatisk bli lagt inn på Ubidots. Om du ønsker å vise fram målingene dine, oppretter du widgets på et dashboard inne på Ubidots og velger disse variablene.
