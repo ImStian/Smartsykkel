@@ -1,0 +1,333 @@
+/*
+Hei, denne CSS-fila er ikkje heilt optimisert for å være lesar vennleg endå, dette er pga at CSS er relativt nytt for forfattaren
+og hovudfokuset for prosjektet er trass alt systemet! 
+Uansett det er grovstrukturert etter tilhøyrande html fil og vidare sections
+Sjølve koden er ei blanding frå tutorials, tidligare prosjekt og litt nytt :)
+Tutorials og bildekjelder er i README fila
+
+Hex koder:
+#FAED26
+#46344E
+#5A5560
+#9D8D8F
+#9B786F
+*/
+:root{
+--tekst : #f3f2f2;
+--farge1: #FAED26 ;
+--farge2: #46344E;
+--farge3: #5A5560;
+--farge4:   #9D8D8F;
+--farge5:  #9B786F;
+--farge6: #71298f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/*CSS kode som tilhøyrar index.html*/
+/*Banner er både på index.html og om.html*/
+#header{
+    background-image: linear-gradient(rgba(11, 12, 16, 0.7),rgba(31, 40, 51, 0.7)), url(/WebsiteIoT/Bilde/bike.jpg);
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style:none ;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: var(--tekst, white);
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--farge1, yellow);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+#header h1{
+    color: var(--farge1);
+    position: absolute;
+    top: 50%;
+    left: 66%;
+}
+/*Her kjem vi til section graf som innheld grid structur*/
+#graf{
+    background-image: url(/WebsiteIoT/Bilde/raspberri.jpg);
+    background-size: cover;
+    padding: 20vh 0;
+}
+#graf h1{
+    text-align: center;
+    font-size: xx-large;
+    color: var(--farge1);
+    text-decoration: underline;
+}
+.grid-haldar{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 33vh;
+    margin:20px 40px;
+}
+.grid-haldar .kort{
+    background-color: var(--farge2);
+}
+@media screen and (min-width: 600px) {
+    .kort-hog {
+      grid-row: span 2 / auto;
+    }
+  
+    .kort-bredde {
+      grid-column: span 2 / auto;
+    }
+  }
+/*Section for anmeldingar*/
+#anmeldinger{
+    background-size: cover;
+    height: 120vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.52), rgba(0,0,0,0.73)), url(/WebsiteIoT/Bilde/bike2.jpg);
+    padding: 10vh 5%;
+    text-align: center;
+}
+#anmeldinger h1{
+    padding: 10vh 0 ;
+    font-size: xx-large;
+    color: var(--farge1);
+    text-decoration: underline;
+}
+.gridA{
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-auto-rows: 1;
+    margin:20px 40px;
+}
+.gridA .kortA{
+    border-radius: 10px;
+    background-color: var(--farge2);
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 5%;
+
+}
+.gridA .kortA img{
+    height: 10vh;
+    margin-left: 5px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+
+/*CSS kode som passar til om.html sida*/
+
+/*Our team, stjelt frå prosjekt i fjor*/
+.ourTeam{
+    background-image: linear-gradient(rgba(11, 12, 16, 0.7),rgba(31, 40, 51, 0.7)),url(/WebsiteIoT/Bilde/raspberri.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: 110vh;
+}
+.wrapper-team{
+    margin-top: 60px;
+    text-align: center;
+}
+.wrapper-team h1{
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.wrapper-team .our_team{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.wrapper-team .our_team .team_member{
+    width: 250px;
+    margin: 5px;
+    background: #fff;
+    padding: 20px 10px;
+}
+.wrapper-team .our_team .team_member .member_img{
+    background: #C5C6C7;
+    max-width: 190px;
+    width: 100%;
+    height: 190px;
+    margin:0 auto;
+    border-radius: 50%;
+    padding: px;
+    cursor: pointer;
+    position: relative;
+}
+
+.wrapper-team .our_team .team_member .member_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-team .our_team .team_member h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0;
+}
+.wrapper-team .our_team .team_member span{
+    font-size: 10px;
+}
+.wrapper-team .our_team .team_member p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.wrapper-team .our_team .team_member .social_media{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 95%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+.wrapper-team .our_team .team_member .social_media .item{
+    margin: 0 10px;
+}
+.wrapper-team .our_team .team_member .social_media .fab{
+    color: #66FCF1;
+    font-size: 20px;
+}
+.wrapper-team .our_team .team_member .member_img:hover .social_media{
+    transform: scale(1);
+}
+/*Bildegalleri*/
+#oppbygging{
+    padding:50px;
+    text-align: center;
+    background-color: rgba(31, 40, 51, 255);
+}
+#oppbygging h1{
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+/*Dokumentasjon*/
+#dokumentasjon{
+    background-image: url(/WebsiteIoT/Bilde/bikelane.jpg);
+    background-size: cover;
+    color: #f3f2f2;
+    text-align: center;
+    padding: 50px 30px;
+}
+#dokumentasjon i{
+    margin: 4vh 0;
+}
+#dokumentasjon h1{
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+a:hover{
+    color: #9520c7;
+    transition:0.7s;
+}
+a{
+    text-decoration: none;
+        color: var(--farge6);
+}
+.grid-doc{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 33vh;
+    margin:20px 40px;
+}
+.kortdoc{
+    background-color: rgba(255, 255, 255, 0.637);
+    border-radius: 0;
+    text-decoration: overline;
+}
