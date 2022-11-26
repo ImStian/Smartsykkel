@@ -34,3 +34,6 @@ const char *DEVICE_LABEL = "";   // device label to subscribe to
 - <em>DEVICE_LABEL</em> er navnet på enheten du oppretter inne på Ubidots.
 
 Når du kjører koden for første gang vil variablene som tilhører enheten automatisk bli lagt inn på Ubidots. Om du ønsker å vise fram målingene dine, oppretter du widgets på et dashboard inne på Ubidots og velger disse variablene.
+
+## NB:
+Kodefilene er av filtypen ".cpp". For å laste opp til ESP32 krever det derfor at man kopierer innholdet i disse kodefilene over til Arduino IDE. ".cpp" blir brukt framfor ".ino" fordi av erfaring kan det til tider oppstå problemer med å opprette skisser med ".ino"-filer, som gjør det vrient å lese av koden.
