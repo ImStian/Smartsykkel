@@ -128,13 +128,13 @@ void calibrate_mpu(){// Kalibrerer MPU6050 for å minimere målingsavvik
 
 void configure_oled(){ //Funksjon som sjekker om OLED-skjermen er koblet til riktig
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { 
-    Serial.println(F("SSD1306 allocation failed"));
+    Serial.println(F("OLED SKJERM - oppkobling mislykket"));
     for(;;);}
 
-  display.clearDisplay(); // Clearer skjerm for å evt. fjerne det tidligere innholdet
+  display.clearDisplay(); // Rydder skjerm for å fjerne det tidligere innholdet
   display.setTextSize(1); // Velger størrelse på tekst
   display.setTextColor(WHITE); // Velger farge på tekst 
-  display.setCursor(0, 10); //
+  display.setCursor(0, 10); // Definerer hvor på skjermen teksten skrives 
 }
 
 
